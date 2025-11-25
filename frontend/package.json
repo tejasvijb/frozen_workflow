@@ -9,10 +9,13 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.90.11",
     "@xyflow/react": "^12.9.3",
+    "lucide-react": "^0.554.0",
     "next": "16.0.4",
     "react": "19.2.0",
     "react-dom": "19.2.0",
+    "socket.io-client": "^4.8.1",
     "zustand": "^5.0.8"
   },
   "devDependencies": {
