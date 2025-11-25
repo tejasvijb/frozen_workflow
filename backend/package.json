@@ -1,0 +1,62 @@
+{
+  "name": "frozen_workflow",
+  "version": "1.0.0",
+  "description": "A workflow with real-time updates using WebSockets.",
+  "scripts": {
+    "dev": "tsx --watch --env-file .env src/index.ts",
+    "start": "node --env-file .env dist/src/index.js",
+    "build": "tsc",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "format:check:debug": "prettier --check . --log-level debug",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tejasvijb/frozen_workflow.git"
+  },
+  "keywords": [],
+  "author": "tejasvijb",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/tejasvijb/frozen_workflow/issues"
+  },
+  "homepage": "https://github.com/tejasvijb/frozen_workflow#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^8.19.2",
+    "morgan": "^1.10.1",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.38.0",
+    "@tsconfig/node22": "^22.0.2",
+    "@types/express": "^5.0.4",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^24.9.1",
+    "eslint": "^9.38.0",
+    "eslint-plugin-perfectionist": "^4.15.1",
+    "lint-staged": "^16.2.6",
+    "prettier": "^3.6.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.2"
+  },
+  "imports": {
+    "#/*": "./src/*"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint",
+      "prettier --check"
+    ],
+    "*.{json,yml,yaml,md}": [
+      "prettier --check"
+    ]
+  }
+}
