@@ -123,8 +123,8 @@ function simulateWorkflowExecution(
 
         const nodeEndTime = Date.now();
 
-        // Randomly fail 10% of nodes for demo
-        if (Math.random() < 0.1) {
+        // Randomly fail 25% of nodes for demo
+        if (Math.random() < 0.25) {
           emitter.emitNodeEvent(socketId, workflowId, {
             eventType: "error",
             nodeId: node.id,
